@@ -40,7 +40,7 @@ namespace covid.Services
         }
         public ICollection<Case> GetDeceasedCases()
         {
-            throw new NotImplementedException();
+            return _caseContext.Cases.Where(a => a.Type == "Deceased").OrderBy(a => a.LastName).ToList();
         }
 
 
