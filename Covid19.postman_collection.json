@@ -1,0 +1,279 @@
+{
+	"info": {
+		"_postman_id": "bfaaff78-ff0b-4334-8335-6c47142d7ab9",
+		"name": "Covid19",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Cases",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"subject\": \"testing1232131\",\r\n    \"_id\": \"5fb103fec639a487e2a95639\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/case",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"case"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Cured Cases",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"subject\": \"testing1232131\",\r\n    \"_id\": \"5fb103fec639a487e2a95639\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/case/type/cured",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"case",
+						"type",
+						"cured"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Infected Cases",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"subject\": \"testing1232131\",\r\n    \"_id\": \"5fb103fec639a487e2a95639\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/case/type/infected",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"case",
+						"type",
+						"infected"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Case by Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"subject\": \"testing1232131\",\r\n    \"_id\": \"5fb103fec639a487e2a95639\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/case/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"case",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a case",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Description",
+							"value": "This is a Description",
+							"type": "text"
+						},
+						{
+							"key": "FirstName",
+							"value": "John",
+							"type": "text"
+						},
+						{
+							"key": "LastName",
+							"value": "Doe",
+							"type": "text"
+						},
+						{
+							"key": "Type",
+							"value": "Cured",
+							"type": "text"
+						},
+						{
+							"key": "Deceased",
+							"value": "True",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/case",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"case"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a  Case",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/case/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"case",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a case",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Type",
+							"value": "Infected",
+							"type": "text"
+						},
+						{
+							"key": "Deceased",
+							"value": "False",
+							"type": "text"
+						},
+						{
+							"key": "FirstName",
+							"value": "Joe",
+							"type": "text"
+						},
+						{
+							"key": "LastName",
+							"value": "Billy",
+							"type": "text"
+						},
+						{
+							"key": "Description",
+							"value": "Something",
+							"type": "text"
+						},
+						{
+							"key": "Id",
+							"value": "1",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/case/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"case",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
